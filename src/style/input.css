@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+  }
+}
+
+@layer components {
+  .site-header {
+    @apply border-b border-black/10 bg-[#f7f4ef];
+  }
+
+  .icon-btn {
+    @apply grid h-9 w-9 place-items-center rounded-full border border-black/15 transition hover:border-black/40;
+  }
+
+  .icon-btn img {
+    @apply h-4 w-4;
+  }
+
+  .brand-title {
+    @apply text-[15px] uppercase tracking-[0.4em];
+  }
+
+  .brand-subtitle {
+    @apply mt-1 text-[10px] uppercase tracking-[0.35em] text-black/60;
+  }
+
+  .hero {
+    @apply relative flex items-end;
+    background-image: url("../img/hero_background.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 0;
+    flex: 1;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.6) 100%);
+  }
+
+  .hero-content {
+    @apply relative mx-auto w-full max-w-6xl px-6 pb-16 text-white;
+  }
+
+  .hero-eyebrow {
+    @apply text-sm uppercase tracking-[0.4em] text-white/80;
+  }
+
+  .hero-title {
+    @apply mt-3 text-4xl font-light tracking-[0.2em] md:text-5xl;
+  }
+
+  .hero-text {
+    @apply mt-4 max-w-md text-sm text-white/85;
+  }
+
+  .hero-actions {
+    @apply mt-6 flex flex-wrap items-center gap-4;
+  }
+
+  .hero-primary {
+    @apply rounded-full border border-white/80 px-6 py-2 text-xs uppercase tracking-[0.3em] text-white transition hover:bg-white hover:text-black;
+  }
+
+  .hero-secondary {
+    @apply text-xs uppercase tracking-[0.3em] text-white/80 underline decoration-white/50 underline-offset-4 transition hover:text-white;
+  }
+
+  .selection {
+    @apply bg-[#faf6ef] py-16;
+  }
+
+  .selection-title {
+    @apply text-sm uppercase tracking-[0.4em] text-black/80;
+  }
+
+  .selection-grid {
+    @apply mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .selection-card {
+    @apply flex flex-col;
+  }
+
+  .selection-img {
+    @apply flex items-center justify-center bg-[#f2eadf] p-8;
+    min-height: 260px;
+  }
+
+  .selection-img img {
+    @apply max-h-56 w-auto;
+  }
+
+  .selection-meta {
+    @apply mt-5 flex items-center justify-between gap-4 text-xs uppercase tracking-[0.25em] text-black/80;
+  }
+
+  .selection-name {
+    @apply max-w-[70%];
+  }
+
+  .selection-price {
+    @apply text-black/70;
+  }
+
+  .selection-footer {
+    @apply mt-12 flex justify-center;
+  }
+
+  .selection-link {
+    @apply text-sm uppercase tracking-[0.3em] underline underline-offset-4 text-black/70 transition hover:text-black;
+  }
+
+  .hero-secondary-inner {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .hero-secondary-content {
+    @apply relative flex min-h-[55vh] items-end bg-cover bg-center px-10 pb-10 text-white;
+    background-image: url("../img/hero_section_2.jpg");
+  }
+  
+  .video-section {
+    @apply bg-[#faf6ef] py-16
+  }
+}
