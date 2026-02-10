@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avrora Atelier</title>
     <link rel="stylesheet" href="src/style/output.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body id="top" class="min-h-screen bg-[#f7f4ef] text-[#1b1b1b]">
@@ -14,21 +15,21 @@
             <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
                 <div class="text-center">
                     <div class="brand-title">Avrora Atelier</div>
-                    <div class="brand-subtitle">Since 2024</div>
+                    <div class="brand-subtitle">Since 2026</div>
                 </div>
 
                 <div class="flex items-center gap-4">
-                    <button class="icon-btn" aria-label="Поиск">
-                        <img src="src/svg/icon-search.svg" alt="">
+                    <button class="icon-btn" id="icon-search" aria-label="Поиск">
+                        <img src="src/svg/icon-search.svg" alt="иконка поиска">
                     </button>
-                    <button class="icon-btn" aria-label="Профиль">
-                        <img src="src/svg/icon-user.svg" alt="">
+                    <button class="icon-btn" id="icon-user" aria-label="Профиль">
+                        <img src="src/svg/icon-user.svg" alt="иконка пользователя">
                     </button>
-                    <button class="icon-btn" aria-label="Выбор языка">
-                        <img src="src/svg/icon-pin.svg" alt="">
+                    <button class="icon-btn" id="icon-map" aria-label="Карта">
+                        <img src="src/svg/icon-pin.svg" alt="иконка карты">
                     </button>
-                    <button class="icon-btn" aria-label="Корзина">
-                        <img src="src/svg/icon-bag.svg" alt="">
+                    <button class="icon-btn" id="icon-bag" aria-label="Корзина">
+                        <img src="src/svg/icon-bag.svg" alt="иконка корзины">
                     </button>
                 </div>
             </div>
@@ -44,8 +45,8 @@
                         Откройте подборку украшений, созданных для особенных моментов и ежедневной роскоши.
                     </p>
                     <div class="hero-actions">
-                        <button class="hero-primary">к коллекции</button>
-                        <button class="hero-secondary">узнать больше</button>
+                        <button id="toCollection" class="hero-primary">к коллекции</button>
+                        <button id="exploreMore" class="hero-secondary">узнать больше</button>
                     </div>
                 </div>
             </section>
@@ -94,7 +95,7 @@
                 </article>
             </div>
             <div class="selection-footer">
-                <button class="selection-link">посмотреть все</button>
+                <button class="selection-link" id="seeAll">посмотреть все</button>
             </div>
         </div>
     </section>
@@ -123,7 +124,7 @@
     <section class="info-grid">
         <div class="info-grid-inner">
             <article class="info-card">
-                <img class="info-icon" src="src/svg/delivery.svg" alt="">
+                <img class="info-icon" src="src/svg/delivery.svg" alt="изображение доставки">
                 <h3 class="info-title">Бесплатная доставка</h3>
                 <p class="info-text">
                     Все заказы отправляются в течение 2–3 рабочих дней, за исключением индивидуальных изделий —
@@ -131,7 +132,7 @@
                 </p>
             </article>
             <article class="info-card">
-                <img class="info-icon" src="src/svg/return_arrow.svg" alt="">
+                <img class="info-icon" src="src/svg/return_arrow.svg" alt="изображение возврата">
                 <h3 class="info-title">Бесплатный возврат</h3>
                 <p class="info-text">
                     У вас есть до 14 рабочих дней после получения заказа, чтобы оформить возврат, указав номер
@@ -139,7 +140,7 @@
                 </p>
             </article>
             <article class="info-card">
-                <img class="info-icon" src="src/svg/planet.svg" alt="">
+                <img class="info-icon" src="src/svg/planet.svg" alt="изображение планеты">
                 <h3 class="info-title">Доставка по миру</h3>
                 <p class="info-text">
                     Мы доставляем по всему миру. Все налоги уже включены в стоимость для
@@ -147,7 +148,7 @@
                 </p>
             </article>
             <article class="info-card">
-                <img class="info-icon" src="src/svg/payment.svg" alt="">
+                <img class="info-icon" src="src/svg/payment.svg" alt="изображение оплаты">
                 <h3 class="info-title">Оплата</h3>
                 <p class="info-text">
                     Мы принимаем все безопасные способы оплаты, включая Apple Pay, PayPal, Amex и дебетовые карты.

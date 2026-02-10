@@ -185,6 +185,28 @@
   .footer-top-link {
     @apply text-[11px] uppercase tracking-[0.3em] underline underline-offset-4 text-[#f7f4ef]/80 transition hover:text-white;
   }
+
+  .toast-container {
+    @apply pointer-events-none fixed top-6 right-6 z-50 flex max-w-[280px] flex-col gap-3;
+  }
+
+  .toast {
+    @apply pointer-events-auto rounded-[18px] border border-black/15 bg-[#f7f4ef] px-5 py-4 text-[11px] uppercase text-center text-black/80 shadow-[0_14px_40px_rgba(0,0,0,0.12)];
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 200ms ease, transform 240ms ease;
+  }
+
+  .toast.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .toast.is-hiding {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
 }
 
 @media (max-width: 768px) {
